@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"
+          name="viewport"
+          content="
+              width=device-width,
+              initial-scale=1.0,
+              maximum-scale=1.0,
+              minimum-scale=1.0,
+              user-scalable=no"
+    >
+    <title>文件上传测试</title>
+    <link rel="stylesheet" href="./css/dialog.css">
+    <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./js/file.js"></script>
+    <script src="./js/UploadFileDialog.js"></script>
+    <script type="text/javascript">
+        function refresh(){
+            var fileInfo;
+            fileInfo = getAllFile();
+            alert(fileInfo);
+            var fileInfoJson = JSON.parse(fileInfo);
+            alert(fileInfoJson[0].date);
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="提交文件" onclick="uploadFileDialog()">
+    <input type="button" value="刷新" onclick="refresh()">
+
+    <div class="dialog_root">
+        <div class="dialog_content">
+            <h1>上传文件</h1>
+
+            <label>选择文件类型:</label>
+
+            <ul>
+                <li tabindex="1" onclick="chooseTopic()" id="li-topic">题目</li>
+                <li tabindex="1" onclick="chooseLadderDiagram()" id="li-ladder-diagram">梯形图</li>
+                <li tabindex="1" onclick="chooseTouchScreen()" id="li-touch-screen">触摸屏</li>
+            </ul>
+
+            <div class="input-project-name">
+                <label for="project-name">项目名称:</label><br>
+                <input type="text" id="project-name" name="projectName"><br>
+            </div>
+
+            <label for="file" class="upload-file">选择文件</label>
+            <input type="file" id="file" name="file" onchange="getChooseFileName()">
+
+            <div>
+                <label class="show-select-file-name">选择的文件:<br>
+                    <span id="file-name"></span>
+                </label>
+            </div>
+
+            <div class="dialog_button">
+                <button type="button" id="confirm_button" onclick="uploadFile()">提交</button>
+                <button type="button" id="cancel_button" onclick="closeDialog()">取消</button>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

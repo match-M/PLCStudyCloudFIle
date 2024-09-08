@@ -1,0 +1,130 @@
+.dialog_root {
+    /*默认隐藏弹窗*/
+    display: none;
+    position: fixed;
+
+    /*背景全屏*/
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dialog_content {
+    width: 40%;
+    height: 35%;
+    padding: 30px;
+    margin: 15% auto;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.dialog_content ul{
+    list-style-type: none; /*清除无序列表前的小点*/
+    width: 260px;
+    height: 30px;
+    background: white;
+}
+
+.dialog_content li{
+    float: left;
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    border: 1px solid #DDDDDD;
+}
+
+.dialog_content li:hover{
+    background-color: lightgray;
+}
+
+.dialog_content li:active{
+    background-color: deepskyblue;
+}
+
+.dialog_content li:focus{
+    background-color: deepskyblue;
+}
+
+.dialog_content input[type="file"]{
+    display: none;
+}
+
+.dialog_content input[type="text"]{
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-color: black;
+}
+
+.dialog_content .input-project-name{
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.dialog_content .upload-file{
+    width: 100px;
+    height: 30px;
+    padding: 5px 5px 5px 5px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    background-color: deepskyblue;
+    box-shadow: 5px 5px 5px #87CEFA;
+}
+
+.dialog_content .upload-file:hover{
+    background-color: #87CEFA;
+}
+
+.dialog_content .upload-file:active{
+    background-color: #1E90FF;
+}
+
+.dialog_content .dialog_button button{
+    position: fixed;
+    border: none;
+    width: 100px;
+    height: 30px;
+    top: 63%;
+    border-radius: 5px;
+}
+
+.dialog_content #confirm_button {
+    left: 60%;
+    color: white;
+    background-color: deepskyblue;
+    box-shadow: 5px 5px 5px #87CEFA;
+}
+
+.dialog_content #confirm_button:hover {
+    background-color: #87CEFA;
+}
+
+.dialog_content #confirm_button:active {
+    background-color: #1E90FF;
+}
+
+
+.dialog_content #cancel_button {
+    left: 50%;
+    background-color: white;
+    box-shadow: 5px 5px 5px #DCDCDC;
+}
+
+.dialog_content #cancel_button:hover {
+    background-color: lightgray;
+}
+
+.dialog_content #cancel_button:active {
+    background-color: #888888;
+}
+
+.dialog_content .show-select-file-name{
+    position: relative;
+    left:50%;
+    top:-140px;
+}
